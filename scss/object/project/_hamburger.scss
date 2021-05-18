@@ -1,0 +1,37 @@
+/* ハンバーガーメニューボタン */
+.p-hamburger {
+    color: #fff;
+    background-color: #1B1310;
+    display: block;       /* ブロックレベルで表示 */
+    width: 55px;          /* 幅 */
+    height: 75px;         /* 高さ */
+    position: relative;   /* 通常の位置を基準とした相対的な配置 */
+    // z-index: 3;           /* 値が大きいものほど前面（手前）に表示される （0 が基準）*/
+    border: none;          /* 線なし */
+    cursor: pointer;      /* リンクカーソル */
+    @include breakpoint( breakpoint_small ) {
+        display: none;
+    }
+
+    .bar{
+        width: 25px;
+        height: 2px;
+        display: block;                 /* ブロックレベルで表示 */
+        position: absolute;             /* 絶対位置 */
+        left: 50%;
+        //transform: translateX(-50%);  /* X方向の子要素の半分戻る */
+      }
+
+      /* 三本線のマージン指定 */
+      .bar_top{
+        top: 30px;
+      }
+      .bar_mid{
+        top: 50%;
+        transform: translate(-50%,-50%);
+      }
+      .bar_bottom{
+        bottom: 30px;
+      }
+
+  }

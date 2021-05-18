@@ -1,0 +1,44 @@
+/* ヘッダー全般 */
+.l-header{
+    width: 100%;
+    // align-items: center;
+    display: flex;
+    justify-content: space-between;  //各アイテムを均等に配置し、最初のアイテムは先頭に寄せ、最後のアイテムは末尾に寄せる 
+    //position: relative;
+    // flex-direction: row;
+    color: #fff;
+    background-color: #1B1310;
+    // z-index: 1100;
+    position: fixed;
+    top: 0;
+    left: 0;
+    //box-sizing: border-box;
+
+    h1{
+        font-size: 26px;// ここ、あとで見直し
+        // margin: 20px, 0, 20px, 15px;
+        margin-top: 20px;
+        margin-left: 15px;
+        margin-bottom: 20px;
+    }
+
+//     /* メニュークラス */
+//   .l-header__menu{
+//     /* ハンバーガーメニューボタン */
+//     .p-button{
+//       // span{
+//         @include breakpoint (width_1201){
+//           display: none;
+//         }
+//       // }
+//     }
+
+    /* メニュー */
+    .p-gnavi{
+      display: none;
+      //margin-top: 0;
+      @include breakpoint ( breakpoint_small ){
+        display: contents;
+      }
+    }
+  }

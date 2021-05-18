@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html {
   font-size: 62.5%;
 }
@@ -15,5 +16,83 @@ img {
 
 a {
   text-decoration: none;
+}
+
+/* ヘッダー全般 */
+.l-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  color: #fff;
+  background-color: #1B1310;
+  position: fixed;
+  top: 0;
+  left: 0;
+  /* メニュー */
+}
+
+.l-header h1 {
+  font-size: 26px;
+  margin-top: 20px;
+  margin-left: 15px;
+  margin-bottom: 20px;
+}
+
+.l-header .p-gnavi {
+  display: none;
+}
+
+@media (min-width: 375px) {
+  .l-header .p-gnavi {
+    display: contents;
+  }
+}
+
+/* ハンバーガーメニューボタン */
+.p-hamburger {
+  color: #fff;
+  background-color: #1B1310;
+  display: block;
+  /* ブロックレベルで表示 */
+  width: 55px;
+  /* 幅 */
+  height: 75px;
+  /* 高さ */
+  position: relative;
+  /* 通常の位置を基準とした相対的な配置 */
+  border: none;
+  /* 線なし */
+  cursor: pointer;
+  /* リンクカーソル */
+  /* 三本線のマージン指定 */
+}
+
+@media (min-width: 375px) {
+  .p-hamburger {
+    display: none;
+  }
+}
+
+.p-hamburger .bar {
+  width: 25px;
+  height: 2px;
+  display: block;
+  /* ブロックレベルで表示 */
+  position: absolute;
+  /* 絶対位置 */
+  left: 50%;
+}
+
+.p-hamburger .bar_top {
+  top: 30px;
+}
+
+.p-hamburger .bar_mid {
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.p-hamburger .bar_bottom {
+  bottom: 30px;
 }
 /*# sourceMappingURL=style.css.map */

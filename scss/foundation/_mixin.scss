@@ -1,0 +1,19 @@
+@mixin breakpoint( $breakpoint ) {
+    // @if $breakpoint == width_1201{
+    //   @media ( min-width : 1201px ){
+    //     @content;
+    //   }
+    // }
+
+    // @if $breakpoint == width_1281{
+    //   @media ( min-width : 1281px ){
+    //     @content;
+    //   }
+    // }
+
+    @if $breakpoint == breakpoint_small{
+      @media( min-width: 375px ){
+        @content;
+      }
+    }
+  }
