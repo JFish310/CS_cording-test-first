@@ -1,7 +1,7 @@
 .p-main__first-view{
     width: 100%;
-    // height:90vh;
-    height: calc( 100vh - 74px );
+    height:90vh;
+    // height: calc( 100vh - 74px );
     background-color: #1B1310;
     background-image: url(/img/mainvisual-bg_sp.jpg);
     background-position: center;
@@ -9,13 +9,19 @@
     display: flex;
     justify-content: center;
     align-items: center;                /* 要素の真ん中へ */
+    @include breakpoint( breakpoint_small ) {
+        background-image: url(/img/mainvisual-bg.jpg);
+    }
 
     .p-main__first-view__catch-copy{
         font-size: 30px;
         color: #fff;
         border: 2px solid #fff;
         padding: 30px 40px;
-
-
+        white-space: nowrap;
+        @include breakpoint( breakpoint_small ) {
+            font-size: 50px;
+            padding: 34px 42px;
+        }
     }
 }

@@ -7,7 +7,7 @@ body {
   font-size: 1.6rem;
   line-height: 1.7;
   font-weight: 400;
-  font-family: "Noto Sans JP";
+  font-family: 'Roboto', 'Noto Sans JP', sans-serif;
 }
 
 img {
@@ -28,6 +28,7 @@ a {
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid #fff;
+  /* 境界線に白いのボーダー */
   position: fixed;
   /* メニュー */
 }
@@ -43,9 +44,21 @@ a {
   }
 }
 
+.p-main__about > h2 {
+  font-size: 36px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.p-main__contact > h2 {
+  font-size: 26px;
+  font-weight: bold;
+  text-align: center;
+}
+
 .p-main__first-view {
   width: 100%;
-  height: calc( 100vh - 74px);
+  height: 90vh;
   background-color: #1B1310;
   background-image: url(/img/mainvisual-bg_sp.jpg);
   background-position: center;
@@ -57,11 +70,25 @@ a {
   /* 要素の真ん中へ */
 }
 
+@media (min-width: 375px) {
+  .p-main__first-view {
+    background-image: url(/img/mainvisual-bg.jpg);
+  }
+}
+
 .p-main__first-view .p-main__first-view__catch-copy {
   font-size: 30px;
   color: #fff;
   border: 2px solid #fff;
   padding: 30px 40px;
+  white-space: nowrap;
+}
+
+@media (min-width: 375px) {
+  .p-main__first-view .p-main__first-view__catch-copy {
+    font-size: 50px;
+    padding: 34px 42px;
+  }
 }
 
 .p-gnavi .menu {
@@ -124,5 +151,17 @@ a {
 
 .p-hamburger .bar_bottom {
   bottom: 29px;
+}
+
+.p-main__news > h2 {
+  font-size: 36px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.p-main__service > h2 {
+  font-size: 36px;
+  font-weight: bold;
+  text-align: center;
 }
 /*# sourceMappingURL=style.css.map */
