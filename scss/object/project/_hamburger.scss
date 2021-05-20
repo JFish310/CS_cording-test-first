@@ -13,13 +13,15 @@
         display: none;
     }
 
-    .bar{
+    > .bar{
         width: 25px;
         height: 2px;
         display: block;                 /* ブロックレベルで表示 */
         position: absolute;             /* 絶対位置 */
-        left: 50%;
-        //transform: translateX(-50%);  /* X方向の子要素の半分戻る */
+        // background-color: #1B1310;
+        background-color: #fff;
+        left: 50%;                    /* 要素の真ん中 */
+        transform: translateX(-50%);  /* X方向の子要素の半分戻る */
       }
 
       /* 三本線のマージン指定 */
@@ -31,7 +33,29 @@
         transform: translate(-50%,-50%);
       }
       .bar_bottom{
-        bottom: 30px;
+        bottom: 29px;
       }
 
   }
+  // .bar{
+  //   width: 25px;
+  //   height: 2px;
+  //   display: block;                 /* ブロックレベルで表示 */
+  //   position: absolute;             /* 絶対位置 */
+  //   // background-color: #1B1310;
+  //   color: #fff;
+  //   left: 50%;
+  //   //transform: translateX(-50%);  /* X方向の子要素の半分戻る */
+  // }
+
+  // /* 三本線のマージン指定 */
+  // .bar_top{
+  //   top: 30px;
+  // }
+  // .bar_mid{
+  //   top: 50%;
+  //   transform: translate(-50%,-50%);
+  // }
+  // .bar_bottom{
+  //   bottom: 30px;
+  // }

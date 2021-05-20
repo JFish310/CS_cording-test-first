@@ -1,0 +1,13 @@
+.p-gnavi{
+    .menu{
+        display: none;
+        @include breakpoint ( breakpoint_small ){
+            display: flex;
+        }
+    }
+
+
+
+
+
+}
