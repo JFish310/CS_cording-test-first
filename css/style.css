@@ -18,6 +18,10 @@ a {
   text-decoration: none;
 }
 
+li {
+  list-style-type: none;
+}
+
 /* ヘッダー全般 */
 .l-header {
   width: 100%;
@@ -44,16 +48,19 @@ a {
   }
 }
 
-.p-main__about > h2 {
+.c-section-title {
   font-size: 36px;
   font-weight: bold;
   text-align: center;
+  margin-bottom: 70px;
 }
 
-.p-main__contact > h2 {
-  font-size: 26px;
-  font-weight: bold;
-  text-align: center;
+.p-main__about {
+  padding: 100px 15px 50px;
+}
+
+.p-main__about dt {
+  margin-bottom: 30px;
 }
 
 .p-main__first-view {
@@ -153,15 +160,35 @@ a {
   bottom: 29px;
 }
 
-.p-main__news > h2 {
-  font-size: 36px;
-  font-weight: bold;
-  text-align: center;
+.p-main__news {
+  padding: 100px 15px;
 }
 
-.p-main__service > h2 {
-  font-size: 36px;
-  font-weight: bold;
-  text-align: center;
+.p-main__news dt {
+  margin-bottom: 30px;
+}
+
+.p-main__news dd {
+  margin-bottom: 30px;
+}
+
+.p-main__news figcaption {
+  margin-bottom: 50px;
+}
+
+.p-main__service {
+  padding: 100px 15px 0px;
+}
+
+.p-main__service dt {
+  margin-bottom: 30px;
+}
+
+.p-main__service dd {
+  margin-bottom: 30px;
+}
+
+.p-main__service figcaption {
+  margin-bottom: 50px;
 }
 /*# sourceMappingURL=style.css.map */
