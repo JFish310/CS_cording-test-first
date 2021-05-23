@@ -55,6 +55,10 @@ li {
   margin-bottom: 70px;
 }
 
+h3 {
+  line-height: 2.0;
+}
+
 .p-main__about {
   padding: 100px 15px 50px;
 }
