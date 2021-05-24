@@ -48,6 +48,18 @@ li {
   }
 }
 
+.l-footer {
+  height: 60px;
+  background-color: #1B1310;
+  color: #fff;
+}
+
+.l-footer p {
+  width: 100%;
+  margin: auto;
+  display: block;
+}
+
 .c-section-title {
   font-size: 36px;
   font-weight: bold;
@@ -57,6 +69,10 @@ li {
 
 h3 {
   line-height: 2.0;
+}
+
+dd {
+  line-height: 2.14;
 }
 
 .p-main__about {
