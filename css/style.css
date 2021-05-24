@@ -52,16 +52,26 @@ li {
   height: 60px;
   background-color: #1B1310;
   color: #fff;
+  display: flex;
+  /* 親要素に指定 */
+  justify-content: center;
+  /* 水平方向の指定 */
+  align-items: center;
+  /* 垂直方向の指定 */
+}
+
+@media (min-width: 375px) {
+  .l-footer {
+    height: 80px;
+  }
 }
 
 .l-footer p {
-  width: 100%;
-  margin: auto;
-  display: block;
+  font-size: 1.4rem;
 }
 
 .c-section-title {
-  font-size: 36px;
+  font-size: 3.6rem;
   font-weight: bold;
   text-align: center;
   margin-bottom: 70px;
