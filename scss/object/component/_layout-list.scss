@@ -17,6 +17,9 @@
 
     .c-layout-list__item{
         margin-bottom: 50px;
+        &:last-of-type{
+            margin-bottom: 0;
+        }
         @include breakpoint( breakpoint_small ){
             margin: 25px;
         }

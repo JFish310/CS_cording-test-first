@@ -70,6 +70,14 @@ li {
   font-size: 1.4rem;
 }
 
+.c-dl--level1 dt {
+  margin-bottom: 20px;
+}
+
+.c-dl--level1 dd {
+  margin-bottom: 40px;
+}
+
 .c-dl--level2 {
   width: 320px;
 }
@@ -106,17 +114,26 @@ li {
   margin-bottom: 50px;
 }
 
+.c-layout-list .c-layout-list__item:last-of-type {
+  margin-bottom: 0;
+}
+
 @media (min-width: 375px) {
   .c-layout-list .c-layout-list__item {
     margin: 25px;
   }
 }
 
-.c-section-title {
+.c-section-title, .c-section-title--small {
   font-size: 3.6rem;
   font-weight: bold;
   text-align: center;
   margin-bottom: 70px;
+}
+
+.c-section-title--small {
+  font-size: 2.4rem;
+  margin-bottom: 75px;
 }
 
 h3 {
@@ -128,7 +145,7 @@ dd {
 }
 
 .p-main__about {
-  padding: 100px 15px 50px;
+  padding: 100px 15px 150px;
 }
 
 .p-main__about dt {
@@ -140,6 +157,10 @@ dd {
   /* offset-x | offset-y | blur-radius | spread-radius | color */
   /* 横方向 縦方向 (ぼかし) (広がり) (影の色) (影の向き) */
   box-shadow: 0 0 10px #1B1310;
+}
+
+.p-main__contact {
+  padding: 0px 15px 50px;
 }
 
 .p-main__first-view {
@@ -240,22 +261,10 @@ dd {
 }
 
 .p-main__news {
-  padding: 100px 15px;
+  padding: 0px 15px 150px;
 }
 
 .p-main__service {
-  padding: 100px 15px 0px;
-}
-
-.p-main__service dt {
-  margin-bottom: 30px;
-}
-
-.p-main__service dd {
-  margin-bottom: 30px;
-}
-
-.p-main__service figcaption {
-  margin-bottom: 50px;
+  padding: 0px 15px 150px;
 }
 /*# sourceMappingURL=style.css.map */
