@@ -1,0 +1,26 @@
+// .p-card{
+
+
+//     &--shadow{
+//         @extend .p-card;
+
+//     }
+
+// }
+
+// .p-card{
+//     // display: block;
+//     // position: relative;
+
+
+
+// }
+
+.p-card--shadow{
+    width: 320px;
+    // position:relative;
+    // box-shadow: 12 12 5px 0 rgba(#1B1310, 0.16);
+    /* offset-x | offset-y | blur-radius | spread-radius | color */
+    /* 横方向 縦方向 (ぼかし) (広がり) (影の色) (影の向き) */
+    box-shadow: 0 0 10px #1B1310; //0 rgba(#1B1310, 0.16);    
+}
