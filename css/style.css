@@ -22,6 +22,10 @@ li {
   list-style-type: none;
 }
 
+fieldset {
+  border: none;
+}
+
 /* ヘッダー全般 */
 .l-header {
   width: 100%;
@@ -68,6 +72,23 @@ li {
 
 .l-footer p {
   font-size: 1.4rem;
+}
+
+.c-button--submit {
+  width: 235px;
+  padding: 15px;
+  background: #1B1310;
+  color: #fff;
+  border: none;
+  border-radius: 2.35em;
+  /* 角丸 */
+  box-shadow: 0 0 10px #1B1310;
+  cursor: pointer;
+  outline: none;
+  appearance: none;
+  font-size: 2.0rem;
+  font-weight: 700;
+  display: block;
 }
 
 .c-dl--level1 dt {
@@ -160,7 +181,28 @@ dd {
 }
 
 .p-main__contact {
-  padding: 0px 15px 50px;
+  padding: 0px 15px;
+  align-items: center;
+  /* センタリング */
+}
+
+.p-main__contact fieldset {
+  margin-bottom: 22px;
+}
+
+.p-main__contact fieldset:last-of-type {
+  margin-bottom: 0;
+}
+
+.p-main__contact fieldset input,
+.p-main__contact fieldset textarea {
+  width: 100%;
+  border: 1.5px solid #141414;
+  /* 枠線 */
+}
+
+.p-main__contact .c-button--submit {
+  margin: 50px auto;
 }
 
 .p-main__first-view {
@@ -198,12 +240,12 @@ dd {
   }
 }
 
-.p-gnavi .menu {
+.p-gnavi .p-gnavi__menu {
   display: none;
 }
 
 @media (min-width: 375px) {
-  .p-gnavi .menu {
+  .p-gnavi .p-gnavi__menu {
     display: flex;
   }
 }
@@ -225,6 +267,7 @@ dd {
   cursor: pointer;
   /* リンクカーソル */
   /* 三本線のマージン指定 */
+  /*  */
 }
 
 @media (min-width: 375px) {
@@ -260,6 +303,58 @@ dd {
   bottom: 29px;
 }
 
+.p-hamburger .p-hamburger.is-open .bar_top {
+  transform: translate(-50%, 10px) rotate(45deg);
+  transition: transform .3s;
+}
+
+.p-hamburger .p-hamburger.is-open .bar_mid {
+  opacity: 0;
+  transition: opacity .3s;
+}
+
+.p-hamburger .p-hamburger.is-open .bar_bottom {
+  transform: translate(-50%, -8px) rotate(-45deg);
+  transition: transform .3s;
+}
+
+.p-hamburger body.noscroll {
+  overflow: hidden;
+}
+
+.p-hamburger .js-hamburger {
+  width: 100%;
+  height: 100%;
+  background-color: #1B1310;
+  z-index: 2;
+}
+
+.p-hamburger .js-hamburger .p-gnavi__menu {
+  display: flex;
+  position: absolute;
+  /*絶対位置*/
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.p-hamburger .js-hamburger .p-gnavi__menu li {
+  margin-right: 0;
+  margin-bottom: 40px;
+}
+
+.p-hamburger .p-gnavi__menu {
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+
+/*ボタンをクローズ*/
 .p-main__news {
   padding: 0px 15px 150px;
 }
