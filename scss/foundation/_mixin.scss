@@ -10,6 +10,11 @@
     //     @content;
     //   }
     // }
+    @if $breakpoint == breakpoint_middle{
+      @media ( min-width : 1078px ){
+        @content;
+      }
+    }
 
     @if $breakpoint == breakpoint_small{
       @media( min-width: 375px ){

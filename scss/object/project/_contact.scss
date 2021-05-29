@@ -1,16 +1,13 @@
 .p-main__contact{
-    padding: 0px 15px;   // 上　左右　下
-    // justify-content: center;    /* 水平方向の指定 */
-    align-items: center;
-    // width: 100%;
+    margin: 0px auto;   // 中央寄せ
+    padding: 0px 15px;  // 上　左右
+    max-width: 700px;
     fieldset{
-        // width: 100%;
-        margin-bottom: 22px;
+        margin-bottom: 22px;    // 各項目の下の余白
         &:last-of-type{
-            margin-bottom: 0;
+            margin-bottom: 0;   // 最後の項目だけ余白なし
         }
-        input,
-        textarea {
+        input, textarea {
             width: 100%;
             border: 1.5px solid #141414;  /* 枠線 */
             // padding: 10px;
@@ -20,8 +17,8 @@
         }
     }
 
-    /* センタリング */
+    /* 送信ボタンのセンタリング */
     .c-button--submit {
-        margin: 50px auto;
+        margin: 50px auto;  // 上下に50px、左右は中央寄せ
     }
 }

@@ -124,19 +124,25 @@ fieldset {
   /* レスポンシブ対応 */
 }
 
-@media (min-width: 375px) {
+@media (min-width: 1078px) {
   .c-layout-list {
-    position: relative;
     flex-direction: row;
   }
 }
 
 .c-layout-list .c-layout-list__item {
+  max-width: 345px;
   margin-bottom: 50px;
 }
 
 .c-layout-list .c-layout-list__item:last-of-type {
   margin-bottom: 0;
+}
+
+@media (min-width: 375px) {
+  .c-layout-list .c-layout-list__item:last-of-type {
+    margin: 25px;
+  }
 }
 
 @media (min-width: 375px) {
@@ -166,11 +172,23 @@ dd {
 }
 
 .p-main__about {
+  margin: 0px auto;
   padding: 100px 15px 150px;
+  max-width: 1030px;
 }
 
 .p-main__about dt {
   margin-bottom: 30px;
+}
+
+.p-card {
+  /* レスポンシブ対応 */
+}
+
+@media (min-width: 1078px) {
+  .p-card ul li:nth-child(odd) {
+    flex-direction: row-reverse;
+  }
 }
 
 .p-card--shadow {
@@ -181,9 +199,10 @@ dd {
 }
 
 .p-main__contact {
+  margin: 0px auto;
   padding: 0px 15px;
-  align-items: center;
-  /* センタリング */
+  max-width: 700px;
+  /* 送信ボタンのセンタリング */
 }
 
 .p-main__contact fieldset {
@@ -194,8 +213,7 @@ dd {
   margin-bottom: 0;
 }
 
-.p-main__contact fieldset input,
-.p-main__contact fieldset textarea {
+.p-main__contact fieldset input, .p-main__contact fieldset textarea {
   width: 100%;
   border: 1.5px solid #141414;
   /* 枠線 */
@@ -360,6 +378,8 @@ dd {
 }
 
 .p-main__service {
+  margin: 0px auto;
   padding: 0px 15px 150px;
+  max-width: 1030px;
 }
 /*# sourceMappingURL=style.css.map */

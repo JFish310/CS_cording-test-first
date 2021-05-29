@@ -12,6 +12,50 @@
 // .p-card__caption{
 
 // }
+.p-card{
+    /* レスポンシブ対応 */
+    @include breakpoint( breakpoint_middle ){
+        ul li:nth-child(odd){
+            flex-direction: row-reverse;
+        }
+        // flex-direction: row;
+        // justify-content: space-between;
+        // .p-card:nth-child(even){
+        //     flex-direction: row-reverse;
+        //     .c-dl--level{
+        //         text-align: left;
+        //     }
+        //     .p-card__caption:nth-child(even){
+        //         text-align: right;
+        //     }
+        // }
+    }
+
+}
+
+
+
+
+
+
+        
+
+
+
+
+// .box:nth-child(even) {
+//     flex-direction: row-reverse;
+//   }
+  
+//   .text {
+//     text-align: left;
+//   }
+//   .box:nth-child(even) .text {
+//     text-align: right;
+//   }
+
+
+
 
 .p-card--shadow{
     width: 320px;
