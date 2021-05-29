@@ -8,31 +8,27 @@
 
     /* レスポンシブ対応 */
     @include breakpoint( breakpoint_middle ){
-        &__item{
+        .c-layout-list__item{
             .p-card{
                 display: flex;          /* 親要素に指定 */
                 // position: relative;
                 flex-direction: row;        /* 横並びに配置する */
                 justify-content: center;    /* 水平方向の指定 */
                 align-items: center;        /* 垂直方向の指定 */
-                :nth-child(odd){
+                &:nth-child(odd){
                     flex-direction: row-reverse;
                 }
             }
-
-            
         }
-        // position: relative;
-        // flex-direction: row;
     }
-    @include breakpoint( breakpoint_small ){
-        // position: relative;
-        // flex-direction: row;
-        // align-items: flex-start;
-        // margin-top: -263px;
-        // z-index: 500;
-        // margin-left: 25;
-      }
+    // @include breakpoint( breakpoint_small ){
+    //     // position: relative;
+    //     // flex-direction: row;
+    //     // align-items: flex-start;
+    //     // margin-top: -263px;
+    //     // z-index: 500;
+    //     // margin-left: 25;
+    //   }
 
     .c-layout-list__item{
         max-width: 345px;

@@ -138,7 +138,7 @@ fieldset {
 }
 
 @media (min-width: 1078px) {
-  .c-layout-list__item .p-card {
+  .c-layout-list .c-layout-list__item .p-card {
     display: flex;
     /* 親要素に指定 */
     flex-direction: row;
@@ -148,7 +148,7 @@ fieldset {
     align-items: center;
     /* 垂直方向の指定 */
   }
-  .c-layout-list__item .p-card :nth-child(odd) {
+  .c-layout-list .c-layout-list__item .p-card:nth-child(odd) {
     flex-direction: row-reverse;
   }
 }
