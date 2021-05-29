@@ -1,14 +1,19 @@
 .c-dl--level1{
     //width: 345px;
+    //margin: 0px 70px;
     dt{
         margin-bottom: 20px;
     }
     dd{
         margin-bottom: 40px;
     }
-    
-
-
+    /* レスポンシブ対応 */
+    @include breakpoint( breakpoint_middle ){
+        margin: 0px 70px;
+        dd{
+            margin-bottom: 0px;
+        }
+    }
 }
 
 .c-dl--level2{
@@ -24,8 +29,4 @@
     // figcaption{
     //     margin-bottom: 50px;
     // }
-
-
-
-
 }

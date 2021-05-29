@@ -15,9 +15,11 @@
 .p-card{
     /* レスポンシブ対応 */
     @include breakpoint( breakpoint_middle ){
-        ul li:nth-child(odd){
-            flex-direction: row-reverse;
-        }
+
+
+        // ul li:nth-child(odd){
+        //     flex-direction: row-reverse;
+        // }
         // flex-direction: row;
         // justify-content: space-between;
         // .p-card:nth-child(even){

@@ -1,5 +1,5 @@
 .c-layout-list{
-    // &--submit {
+    // &--row {
     // width: ;
     display: flex;              /* 親要素に指定 */
     flex-direction: column;     /* 積み重なるように配置する */
@@ -8,8 +8,22 @@
 
     /* レスポンシブ対応 */
     @include breakpoint( breakpoint_middle ){
+        &__item{
+            .p-card{
+                display: flex;          /* 親要素に指定 */
+                // position: relative;
+                flex-direction: row;        /* 積み重なるように配置する */
+                justify-content: center;    /* 水平方向の指定 */
+                align-items: center;        /* 垂直方向の指定 */
+                :nth-child(odd){
+                    flex-direction: row-reverse;
+                }
+            }
+
+            
+        }
         // position: relative;
-        flex-direction: row;
+        // flex-direction: row;
     }
     @include breakpoint( breakpoint_small ){
         // position: relative;
@@ -28,6 +42,41 @@
             @include breakpoint( breakpoint_small ){
                 margin: 25px;
             }
+        }
+        @include breakpoint( breakpoint_middle ){
+            max-width: 1030px;
+            margin: 25px;
+        }
+        // @include breakpoint( breakpoint_small ){
+        //     margin: 25px;
+        // }
+    }
+}
+
+/* News　レスポンシブ　縦並び→横並び */
+.c-layout-list--row{
+    display: flex;              /* 親要素に指定 */
+    flex-direction: column;     /* 積み重なるように配置する */
+    justify-content: center;    /* 水平方向の指定 */
+    align-items: center;        /* 垂直方向の指定 */
+
+    /* レスポンシブ対応 */
+    @include breakpoint( breakpoint_middle ){
+        // position: relative;
+        flex-direction: row;
+    }
+
+    .c-layout-list--row__item{
+        max-width: 345px;
+        margin-bottom: 50px;
+        &:last-of-type{
+            margin-bottom: 0;
+            @include breakpoint( breakpoint_small ){
+                margin: 25px;
+            }
+        }
+        @include breakpoint( breakpoint_middle ){
+            max-width: 1030px;
         }
         @include breakpoint( breakpoint_small ){
             margin: 25px;
