@@ -26,6 +26,47 @@ fieldset {
   border: none;
 }
 
+/*----------------------------------------------------------
+◆SmartPhone  : 320px〜540px
+  iPhone 12mini   : 5.4インチ、375 × 667
+  iPhone 12ProMax : 6.7インチ、428 × 926
+  ※最小幅は320px（iPadminiのsplit viewもこの値）
+  ※利用率が高いのは375pxだが320pxで表示崩れ（横スクロールなど）がないか確認することが確実。
+
+  max-width : 599px
+  min-width : 設定なし（実質599px以下）
+
+  ここでの変数、breakpoint_small
+
+◆Tablet      : 600px〜1024px
+  iPadAir 4 : 10.9インチ、820 × 1180
+  タブレットの最小サイズは  600px
+  最もシェア率の高いサイズが  768 × 1024。つまり横にすると幅は1024px
+
+  max-width : 1024px
+  min-width : 600px
+
+  ここでの変数、breakpoint_middle
+
+◆PC          : 1280px〜
+  PCのブレイクポイントはタブレット1024pxにプラス1px加えた1025px。
+  PCのブレイクポイントは1280px以下で設定が無難。
+
+  max-width : 設定なし（実質1025px以上）
+  min-width : 1025px
+
+  ここでの変数、breakpoint_large
+
+  
+
+
+モバイルファーストなら、min-width
+PCファーストなら、max-width
+
+参照URL
+https://daib-log.com/responsive/
+----------------------------------------------------------*/
+/* variable */
 /* ヘッダー全般 */
 .l-header {
   width: 100%;
@@ -42,11 +83,12 @@ fieldset {
 }
 
 .l-header > h1 {
-  font-size: 26px;
+  font-size: 2.6rem;
   margin-left: 15px;
+  /* SP基準--PC-- */
 }
 
-@media (min-width: 375px) {
+@media (min-width: 1025px) {
   .l-header > h1 {
     margin-left: 120px;
   }
@@ -54,6 +96,7 @@ fieldset {
 
 .l-footer {
   height: 60px;
+  /* SP基準--PC-- */
   background-color: #1B1310;
   color: #fff;
   display: flex;
@@ -64,7 +107,7 @@ fieldset {
   /* 垂直方向の指定 */
 }
 
-@media (min-width: 375px) {
+@media (min-width: 1025px) {
   .l-footer {
     height: 80px;
   }
@@ -93,6 +136,7 @@ fieldset {
 
 .c-dl--level1 {
   /* レスポンシブ対応 */
+  /* SP基準--PC-- */
 }
 
 .c-dl--level1 dt {
@@ -103,9 +147,15 @@ fieldset {
   margin-bottom: 40px;
 }
 
-@media (min-width: 1078px) {
+@media (min-width: 1025px) {
   .c-dl--level1 {
     margin: 0px 70px;
+  }
+  .c-dl--level1:nth-child(odd) {
+    margin-right: 0px;
+  }
+  .c-dl--level1:nth-child(even) {
+    margin-left: 0px;
   }
   .c-dl--level1 dd {
     margin-bottom: 0px;
@@ -135,10 +185,11 @@ fieldset {
   align-items: center;
   /* 垂直方向の指定 */
   /* レスポンシブ対応 */
+  /* SP基準--PC-- */
 }
 
-@media (min-width: 1078px) {
-  .c-layout-list .c-layout-list__item .p-card {
+@media (min-width: 1025px) {
+  .c-layout-list__item .p-card {
     display: flex;
     /* 親要素に指定 */
     flex-direction: row;
@@ -148,27 +199,23 @@ fieldset {
     align-items: center;
     /* 垂直方向の指定 */
   }
-  .c-layout-list .c-layout-list__item .p-card:nth-child(odd) {
+  .c-layout-list__item .p-card:nth-child(odd) {
     flex-direction: row-reverse;
   }
 }
 
 .c-layout-list .c-layout-list__item {
   max-width: 345px;
+  margin: 25px;
   margin-bottom: 50px;
+  /* SP基準--PC-- */
 }
 
 .c-layout-list .c-layout-list__item:last-of-type {
   margin-bottom: 0;
 }
 
-@media (min-width: 375px) {
-  .c-layout-list .c-layout-list__item:last-of-type {
-    margin: 25px;
-  }
-}
-
-@media (min-width: 1078px) {
+@media (min-width: 1025px) {
   .c-layout-list .c-layout-list__item {
     max-width: 1030px;
     margin: 25px;
@@ -186,9 +233,10 @@ fieldset {
   align-items: center;
   /* 垂直方向の指定 */
   /* レスポンシブ対応 */
+  /* SP基準--PC-- */
 }
 
-@media (min-width: 1078px) {
+@media (min-width: 1025px) {
   .c-layout-list--row {
     flex-direction: row;
   }
@@ -197,27 +245,22 @@ fieldset {
 .c-layout-list--row .c-layout-list--row__item {
   max-width: 345px;
   margin-bottom: 50px;
+  /* 横並び */
+  /* SP基準--PC-- */
 }
 
 .c-layout-list--row .c-layout-list--row__item:last-of-type {
   margin-bottom: 0;
 }
 
-@media (min-width: 375px) {
-  .c-layout-list--row .c-layout-list--row__item:last-of-type {
-    margin: 25px;
-  }
-}
-
-@media (min-width: 1078px) {
+@media (min-width: 1025px) {
   .c-layout-list--row .c-layout-list--row__item {
     max-width: 1030px;
+    margin: 0px;
+    margin-right: 35px;
   }
-}
-
-@media (min-width: 375px) {
-  .c-layout-list--row .c-layout-list--row__item {
-    margin: 25px;
+  .c-layout-list--row .c-layout-list--row__item:last-of-type {
+    margin-right: 0;
   }
 }
 
@@ -253,6 +296,7 @@ dd {
 
 .p-card {
   /* レスポンシブ対応 */
+  /* SP基準--PC-- */
 }
 
 .p-card--shadow {
@@ -299,9 +343,10 @@ dd {
   justify-content: center;
   align-items: center;
   /* 要素の真ん中へ */
+  /* SP基準--PC-- */
 }
 
-@media (min-width: 375px) {
+@media (min-width: 1025px) {
   .p-main__first-view {
     background-image: url(/img/mainvisual-bg.jpg);
   }
@@ -313,9 +358,10 @@ dd {
   border: 2px solid #fff;
   padding: 30px 40px;
   white-space: nowrap;
+  /* SP基準--PC-- */
 }
 
-@media (min-width: 375px) {
+@media (min-width: 1025px) {
   .p-main__first-view .p-main__first-view__catch-copy {
     font-size: 50px;
     padding: 34px 42px;
@@ -324,9 +370,10 @@ dd {
 
 .p-gnavi .p-gnavi__menu {
   display: none;
+  /* SP基準--PC-- */
 }
 
-@media (min-width: 375px) {
+@media (min-width: 1025px) {
   .p-gnavi .p-gnavi__menu {
     display: flex;
   }
@@ -348,11 +395,12 @@ dd {
   /* 線なし */
   cursor: pointer;
   /* リンクカーソル */
+  /* SP基準--PC-- */
   /* 三本線のマージン指定 */
   /*  */
 }
 
-@media (min-width: 375px) {
+@media (min-width: 1025px) {
   .p-hamburger {
     display: none;
   }

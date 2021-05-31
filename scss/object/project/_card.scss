@@ -14,7 +14,7 @@
 // }
 .p-card{
     /* レスポンシブ対応 */
-    @include breakpoint( breakpoint_middle ){
+    @include breakpoint( breakpoint_large ){
 
 
         // ul li:nth-child(odd){

@@ -8,8 +8,14 @@
         margin-bottom: 40px;
     }
     /* レスポンシブ対応 */
-    @include breakpoint( breakpoint_middle ){
-        margin: 0px 70px;
+    @include breakpoint( breakpoint_large ){
+        margin: 0px 70px;   // 左右に70pxの余白
+        &:nth-child(odd){
+            margin-right: 0px;  // 右の余白はo
+        }
+        &:nth-child(even){
+            margin-left: 0px;   // 左の余白は0
+        }
         dd{
             margin-bottom: 0px;
         }

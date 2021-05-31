@@ -2,13 +2,13 @@
 .l-header{
   width: 100%;
   height: 75px;
-  background-color: #1B1310;
-  color: #fff;
+  background-color: $color--background-color;
+  color: $color--title-color;
   display: flex;
   justify-content: space-between;  // 各アイテムを均等に配置し、最初のアイテムは先頭に寄せ、最後のアイテムは末尾に寄せる
   align-items: center;
 
-  border-bottom:1px solid #fff;   /* 境界線に白いのボーダー */
+  border-bottom: 1px solid $color--title-color;   /* 境界線に白いのボーダー */
   
     //position: relative;
     // flex-direction: row;
@@ -19,12 +19,12 @@
     //box-sizing: border-box;
 
   > h1{
-      font-size: 26px;// ここ、あとで見直し
+      font-size: 2.6rem;// ここ、あとで見直し
       // margin: 20px, 0, 20px, 15px;
       // margin-top: 20px;
       margin-left: 15px;
       // margin-bottom: 20px;
-      @include breakpoint( breakpoint_small ){
+      @include breakpoint( breakpoint_large ){
         margin-left: 120px;
       }
   }

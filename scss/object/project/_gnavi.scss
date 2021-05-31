@@ -1,7 +1,7 @@
 .p-gnavi{
     .p-gnavi__menu{
         display: none;
-        @include breakpoint ( breakpoint_small ){
+        @include breakpoint ( breakpoint_large ){
             display: flex;
         }
     }
