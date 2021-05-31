@@ -1,11 +1,11 @@
 // ==========================================================================
 // Foundation
 // ==========================================================================
-
 //@import "foundation/_reset";
 @import "foundation/_base";
 @import "foundation/_mixin";
-// @import "foundation/variable";
+@import "foundation/variable";
+
 // ==========================================================================
 // Layout
 // ==========================================================================
@@ -16,17 +16,16 @@
 // ==========================================================================
 // Object
 // ==========================================================================
-
+// -----------------------------------------------------------------
+// Component
+// -----------------------------------------------------------------
 @import "object/component/_button";
 @import "object/component/_definition-list";
 @import "object/component/_layout-list";
 @import "object/component/_section-title";
-
-
-
-
-
-// @import "object/component/_button";
+// -----------------------------------------------------------------
+// Project
+// -----------------------------------------------------------------
 @import "object/project/about";
 @import "object/project/card";
 @import "object/project/contact";
@@ -35,7 +34,6 @@
 @import "object/project/hamburger";
 @import "object/project/news";
 @import "object/project/service";
-
 // -----------------------------------------------------------------
 // Utility
 // -----------------------------------------------------------------

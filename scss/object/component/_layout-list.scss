@@ -7,8 +7,9 @@
     align-items: center;        /* 垂直方向の指定 */
 
     /* レスポンシブ対応 */
-    @include breakpoint( breakpoint_middle ){
-        .c-layout-list__item{
+    @include breakpoint( breakpoint_large ){
+        &__item{
+        // .c-layout-list__item{
             .p-card{
                 display: flex;          /* 親要素に指定 */
                 // position: relative;
@@ -32,14 +33,15 @@
 
     .c-layout-list__item{
         max-width: 345px;
+        margin: 25px;
         margin-bottom: 50px;
         &:last-of-type{
             margin-bottom: 0;
-            @include breakpoint( breakpoint_small ){
-                margin: 25px;
-            }
+            // @include breakpoint( breakpoint_small ){
+            //     margin: 25px;
+            // }
         }
-        @include breakpoint( breakpoint_middle ){
+        @include breakpoint( breakpoint_large ){
             max-width: 1030px;
             margin: 25px;
         }
@@ -57,25 +59,43 @@
     align-items: center;        /* 垂直方向の指定 */
 
     /* レスポンシブ対応 */
-    @include breakpoint( breakpoint_middle ){
+    @include breakpoint( breakpoint_large ){
         // position: relative;
         flex-direction: row;
     }
 
     .c-layout-list--row__item{
         max-width: 345px;
-        margin-bottom: 50px;
+        margin-bottom: 50px;        // liの下に50pxあける
         &:last-of-type{
-            margin-bottom: 0;
-            @include breakpoint( breakpoint_small ){
-                margin: 25px;
+            margin-bottom: 0;       // 最後のliは0px
+        }
+        /* 横並び */
+        @include breakpoint( breakpoint_large ){
+            max-width: 1030px;
+            margin: 0px;            // marginのリセット
+            margin-right: 35px;     // 隣の要素の間は35px空ける
+            &:last-of-type{
+                margin-right: 0;    // 最後のliは0px
             }
         }
-        @include breakpoint( breakpoint_middle ){
-            max-width: 1030px;
-        }
-        @include breakpoint( breakpoint_small ){
-            margin: 25px;
-        }
+
+        // margin: 25px;
+        // &:first-of-type{
+        //     margin-top: 0px;
+        // }
+        // //margin-bottom: 50px;
+        // &:last-of-type{
+        //     margin-bottom: 0;
+        // //     // @include breakpoint( breakpoint_small ){
+        // //     //     margin: 25px;
+        // //     // }
+        // }
+        // @include breakpoint( breakpoint_large ){
+        //     max-width: 1030px;
+        // }
+        // @include breakpoint( breakpoint_small ){
+        //     margin: 25px;
+        // }
     }
 }

@@ -1,18 +1,18 @@
 .l-footer{
     // フッターの高さ
     height: 60px;
-    @include breakpoint( breakpoint_small ) {
+    @include breakpoint( breakpoint_large ) {
         height: 80px;
     }
 
-    background-color: #1B1310;
-    color: #fff;
+    background-color: $color--background-color;
+    color: $color--title-color;
 
     display: flex;              /* 親要素に指定 */
     justify-content: center;    /* 水平方向の指定 */
     align-items: center;        /* 垂直方向の指定 */
 
-    p {
+    p{
         font-size: 1.4rem;
     }
 }
