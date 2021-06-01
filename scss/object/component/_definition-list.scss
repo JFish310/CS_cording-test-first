@@ -1,21 +1,14 @@
 .c-dl--level1{
-    //width: 345px;
-    //margin: 0px 70px;
     dt{
         margin-bottom: 20px;
     }
     dd{
+        font-size: 1.4rem;
         margin-bottom: 40px;
     }
     /* レスポンシブ対応 */
     @include breakpoint( breakpoint_large ){
-        margin: 0px 70px;   // 左右に70pxの余白
-        &:nth-child(odd){
-            margin-right: 0px;  // 右の余白はo
-        }
-        &:nth-child(even){
-            margin-left: 0px;   // 左の余白は0
-        }
+        margin-bottom: 0px;
         dd{
             margin-bottom: 0px;
         }
@@ -30,9 +23,5 @@
     dd{
         padding: 30px 35px;
         font-size: 1.3rem;
-        // margin-bottom: 30px;
     }
-    // figcaption{
-    //     margin-bottom: 50px;
-    // }
 }

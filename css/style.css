@@ -144,18 +144,13 @@ https://daib-log.com/responsive/
 }
 
 .c-dl--level1 dd {
+  font-size: 1.4rem;
   margin-bottom: 40px;
 }
 
 @media (min-width: 1025px) {
   .c-dl--level1 {
-    margin: 0px 70px;
-  }
-  .c-dl--level1:nth-child(odd) {
-    margin-right: 0px;
-  }
-  .c-dl--level1:nth-child(even) {
-    margin-left: 0px;
+    margin-bottom: 0px;
   }
   .c-dl--level1 dd {
     margin-bottom: 0px;
@@ -184,11 +179,32 @@ https://daib-log.com/responsive/
   /* 水平方向の指定 */
   align-items: center;
   /* 垂直方向の指定 */
+}
+
+.c-layout-list__item {
+  max-width: 345px;
+  margin-bottom: 50px;
   /* レスポンシブ対応 */
   /* SP基準--PC-- */
 }
 
+.c-layout-list__item:last-of-type {
+  margin-bottom: 0;
+}
+
 @media (min-width: 1025px) {
+  .c-layout-list__item {
+    max-width: 1030px;
+  }
+  .c-layout-list__item:nth-child(odd) .p-card {
+    flex-direction: row-reverse;
+  }
+  .c-layout-list__item:nth-child(odd) .p-card__caption {
+    padding-left: 70px;
+  }
+  .c-layout-list__item:nth-child(even) .p-card__caption {
+    padding-right: 70px;
+  }
   .c-layout-list__item .p-card {
     display: flex;
     /* 親要素に指定 */
@@ -198,27 +214,6 @@ https://daib-log.com/responsive/
     /* 水平方向の指定 */
     align-items: center;
     /* 垂直方向の指定 */
-  }
-  .c-layout-list__item .p-card:nth-child(odd) {
-    flex-direction: row-reverse;
-  }
-}
-
-.c-layout-list .c-layout-list__item {
-  max-width: 345px;
-  margin: 25px;
-  margin-bottom: 50px;
-  /* SP基準--PC-- */
-}
-
-.c-layout-list .c-layout-list__item:last-of-type {
-  margin-bottom: 0;
-}
-
-@media (min-width: 1025px) {
-  .c-layout-list .c-layout-list__item {
-    max-width: 1030px;
-    margin: 25px;
   }
 }
 
@@ -242,24 +237,24 @@ https://daib-log.com/responsive/
   }
 }
 
-.c-layout-list--row .c-layout-list--row__item {
+.c-layout-list--row__item {
   max-width: 345px;
   margin-bottom: 50px;
   /* 横並び */
   /* SP基準--PC-- */
 }
 
-.c-layout-list--row .c-layout-list--row__item:last-of-type {
+.c-layout-list--row__item:last-of-type {
   margin-bottom: 0;
 }
 
 @media (min-width: 1025px) {
-  .c-layout-list--row .c-layout-list--row__item {
+  .c-layout-list--row__item {
     max-width: 1030px;
     margin: 0px;
     margin-right: 35px;
   }
-  .c-layout-list--row .c-layout-list--row__item:last-of-type {
+  .c-layout-list--row__item:last-of-type {
     margin-right: 0;
   }
 }
@@ -493,5 +488,13 @@ dd {
   margin: 0px auto;
   padding: 0px 15px 150px;
   max-width: 1030px;
+  /* レスポンシブ対応 */
+  /* SP基準--PC-- */
+}
+
+@media (min-width: 1025px) {
+  .p-main__service {
+    padding: 0px 0px 150px;
+  }
 }
 /*# sourceMappingURL=style.css.map */

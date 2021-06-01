@@ -14,3 +14,5 @@ https://crestadesign.org/cording-first/
 
 5/30    mixinのリファクタリング
         variableの設定
+
+5/31    .c-layout-list__item部分の修正

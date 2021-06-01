@@ -2,13 +2,9 @@
     margin: 0px auto;           // 中央寄せ
     padding:0px 15px 150px;     // 上　左右　下
     max-width: 1030px;
-    // dt{
-    //     margin-bottom: 30px;
-    // }
-    // dd{
-    //     margin-bottom: 30px;
-    // }
-    // figcaption{
-    //     margin-bottom: 50px;
-    // }
+
+    /* レスポンシブ対応 */
+    @include breakpoint( breakpoint_large ){
+        padding: 0px 0px 150px;
+    }
 }

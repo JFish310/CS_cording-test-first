@@ -6,48 +6,41 @@
     justify-content: center;    /* 水平方向の指定 */
     align-items: center;        /* 垂直方向の指定 */
 
-    /* レスポンシブ対応 */
-    @include breakpoint( breakpoint_large ){
-        &__item{
-        // .c-layout-list__item{
+    &__item{    // .c-layout-list__item
+        max-width: 345px;
+        margin-bottom: 50px;
+        &:last-of-type{
+            margin-bottom: 0;
+        }
+
+        /* レスポンシブ対応 */
+        @include breakpoint( breakpoint_large ){
+            max-width: 1030px;
+            // 奇数リスト
+            &:nth-child(odd){
+                .p-card {
+                    flex-direction: row-reverse;
+                    &__caption{
+                        padding-left: 70px; // 文章左に余白指定
+                    }
+                }
+            }
+            // 偶数リスト
+            &:nth-child(even){
+                .p-card{
+                    &__caption{
+                        padding-right: 70px; // 文章右に余白指定
+                    }
+                }
+            }
             .p-card{
-                display: flex;          /* 親要素に指定 */
+                display: flex;              /* 親要素に指定 */
                 // position: relative;
                 flex-direction: row;        /* 横並びに配置する */
                 justify-content: center;    /* 水平方向の指定 */
                 align-items: center;        /* 垂直方向の指定 */
-                &:nth-child(odd){
-                    flex-direction: row-reverse;
-                }
             }
         }
-    }
-    // @include breakpoint( breakpoint_small ){
-    //     // position: relative;
-    //     // flex-direction: row;
-    //     // align-items: flex-start;
-    //     // margin-top: -263px;
-    //     // z-index: 500;
-    //     // margin-left: 25;
-    //   }
-
-    .c-layout-list__item{
-        max-width: 345px;
-        margin: 25px;
-        margin-bottom: 50px;
-        &:last-of-type{
-            margin-bottom: 0;
-            // @include breakpoint( breakpoint_small ){
-            //     margin: 25px;
-            // }
-        }
-        @include breakpoint( breakpoint_large ){
-            max-width: 1030px;
-            margin: 25px;
-        }
-        // @include breakpoint( breakpoint_small ){
-        //     margin: 25px;
-        // }
     }
 }
 
@@ -61,10 +54,10 @@
     /* レスポンシブ対応 */
     @include breakpoint( breakpoint_large ){
         // position: relative;
-        flex-direction: row;
+        flex-direction: row;        // 横並び
     }
 
-    .c-layout-list--row__item{
+    &__item{    //.c-layout-list--row__item
         max-width: 345px;
         margin-bottom: 50px;        // liの下に50pxあける
         &:last-of-type{
@@ -79,23 +72,5 @@
                 margin-right: 0;    // 最後のliは0px
             }
         }
-
-        // margin: 25px;
-        // &:first-of-type{
-        //     margin-top: 0px;
-        // }
-        // //margin-bottom: 50px;
-        // &:last-of-type{
-        //     margin-bottom: 0;
-        // //     // @include breakpoint( breakpoint_small ){
-        // //     //     margin: 25px;
-        // //     // }
-        // }
-        // @include breakpoint( breakpoint_large ){
-        //     max-width: 1030px;
-        // }
-        // @include breakpoint( breakpoint_small ){
-        //     margin: 25px;
-        // }
     }
 }
