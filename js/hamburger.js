@@ -1,7 +1,14 @@
-$('.js-hamburger--button').on('click',function(){       // .js-hamburger--buttonをクリックすると
-    $('.js-hamburger--button').toggleClass('in-open');  // .js-hamburger--buttonにcloseクラスを付与(ボタンのアニメーション)
-    $('.p-gnavi__menu').fadeToggle(500);            // .p-gnavi__menuが0.5秒でフェードイン(メニューのフェードイン)
-    $('body').toggleClass('noscroll');              // bodyにnoscrollクラスを付与(スクロールを固定)
+/* .p-hamburgerをクリックすると　*/
+$('.p-hamburger').on('click',function(){
+
+    // .p-hamburger--buttonにcloseクラスを付与(ボタンのアニメーション)
+    $('.p-hamburger').toggleClass('in-open');
+
+    // .p-gnav--hamburgerが0.5秒でフェードイン(メニューのフェードイン)
+    $('.p-gnav--hamburger').fadeToggle(500);
+
+    // bodyにnoscrollクラスを付与(スクロールを固定)
+    $('body').toggleClass('noscroll');
 });
 
 
