@@ -1,4 +1,5 @@
 @charset "UTF-8";
+/* variable */
 html {
   font-size: 62.5%;
 }
@@ -16,6 +17,7 @@ img {
 
 a {
   text-decoration: none;
+  color: #fff;
 }
 
 li {
@@ -66,7 +68,6 @@ PCファーストなら、max-width
 参照URL
 https://daib-log.com/responsive/
 ----------------------------------------------------------*/
-/* variable */
 /* ヘッダー全般 */
 .l-header {
   width: 100%;
@@ -79,7 +80,8 @@ https://daib-log.com/responsive/
   border-bottom: 1px solid #fff;
   /* 境界線に白いのボーダー */
   position: fixed;
-  /* メニュー */
+  /* メニュークラス */
+  /* ハンバーガーメニューボタン */
 }
 
 .l-header > h1 {
@@ -91,6 +93,31 @@ https://daib-log.com/responsive/
 @media (min-width: 1025px) {
   .l-header > h1 {
     margin-left: 120px;
+  }
+}
+
+.l-header__menu {
+  /* メニュー */
+}
+
+.l-header__menu .p-gnavi {
+  display: none;
+  /* SP基準--PC-- */
+}
+
+@media (min-width: 1025px) {
+  .l-header__menu .p-gnavi {
+    display: inline;
+  }
+}
+
+.l-header .p-hamburger {
+  /* SP基準--PC-- */
+}
+
+@media (min-width: 1025px) {
+  .l-header .p-hamburger {
+    display: none;
   }
 }
 
@@ -363,21 +390,51 @@ dd {
   }
 }
 
-.p-gnavi .p-gnavi__menu {
-  display: none;
+.p-gnavi {
+  width: 100%;
+  height: 100%;
+  background-color: #1B1310;
+  z-index: 2;
+}
+
+.p-gnavi__menu {
   /* SP基準--PC-- */
 }
 
 @media (min-width: 1025px) {
-  .p-gnavi .p-gnavi__menu {
+  .p-gnavi__menu {
     display: flex;
+    /* メニューの右側に余白 */
   }
+  .p-gnavi__menu li {
+    margin-right: 55px;
+  }
+}
+
+.p-gnavi--hamburger {
+  width: 100%;
+  height: 100%;
+  background-color: #1B1310;
+  z-index: 2;
+}
+
+.p-gnavi--hamburger__menu {
+  display: block;
+  position: absolute;
+  /*絶対位置*/
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.p-gnavi--hamburger__menu li {
+  margin-right: 0;
+  margin-bottom: 40px;
 }
 
 /* ハンバーガーメニューボタン */
 .p-hamburger {
-  color: #fff;
-  background-color: #1B1310;
   display: block;
   /* ブロックレベルで表示 */
   width: 55px;
@@ -386,12 +443,15 @@ dd {
   /* 高さ */
   position: relative;
   /* 通常の位置を基準とした相対的な配置 */
+  z-index: 3;
+  /* 値が大きいものほど前面（手前）に表示される （0 が基準）*/
   border: none;
   /* 線なし */
   cursor: pointer;
   /* リンクカーソル */
   /* SP基準--PC-- */
-  /* 三本線のマージン指定 */
+  /* ハンバーガーメニューボタン　装飾 */
+  /* ボタンの開閉　is-openの付与 ×ボタンになる*/
   /*  */
 }
 
@@ -401,7 +461,7 @@ dd {
   }
 }
 
-.p-hamburger > .bar {
+.p-hamburger .bar {
   width: 25px;
   height: 2px;
   display: block;
@@ -413,60 +473,35 @@ dd {
   /* 要素の真ん中 */
   transform: translateX(-50%);
   /* X方向の子要素の半分戻る */
+  /* 三本線のマージン指定 */
 }
 
-.p-hamburger .bar_top {
+.p-hamburger .bar-top {
   top: 30px;
 }
 
-.p-hamburger .bar_mid {
+.p-hamburger .bar-middle {
   top: 50%;
   transform: translate(-50%, -50%);
 }
 
-.p-hamburger .bar_bottom {
+.p-hamburger .bar-bottom {
   bottom: 29px;
 }
 
-.p-hamburger .p-hamburger.is-open .bar_top {
+.p-hamburger.is-open .bar-top {
   transform: translate(-50%, 10px) rotate(45deg);
   transition: transform .3s;
 }
 
-.p-hamburger .p-hamburger.is-open .bar_mid {
+.p-hamburger.is-open .bar-middle {
   opacity: 0;
   transition: opacity .3s;
 }
 
-.p-hamburger .p-hamburger.is-open .bar_bottom {
+.p-hamburger.is-open .bar-bottom {
   transform: translate(-50%, -8px) rotate(-45deg);
   transition: transform .3s;
-}
-
-.p-hamburger body.noscroll {
-  overflow: hidden;
-}
-
-.p-hamburger .js-hamburger {
-  width: 100%;
-  height: 100%;
-  background-color: #1B1310;
-  z-index: 2;
-}
-
-.p-hamburger .js-hamburger .p-gnavi__menu {
-  display: flex;
-  position: absolute;
-  /*絶対位置*/
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-}
-
-.p-hamburger .js-hamburger .p-gnavi__menu li {
-  margin-right: 0;
-  margin-bottom: 40px;
 }
 
 .p-hamburger .p-gnavi__menu {

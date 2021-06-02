@@ -1,52 +1,51 @@
 /* ヘッダー全般 */
 .l-header{
-  width: 100%;
-  height: 75px;
-  background-color: $color--background-color;
-  color: $color--title-color;
-  display: flex;
-  justify-content: space-between;  // 各アイテムを均等に配置し、最初のアイテムは先頭に寄せ、最後のアイテムは末尾に寄せる
-  align-items: center;
+    width: 100%;
+    height: 75px;
+    background-color: $color--background-color;
+    color: $color--title-color;
+    display: flex;
+    justify-content: space-between;  // 各アイテムを均等に配置し、最初のアイテムは先頭に寄せ、最後のアイテムは末尾に寄せる
+    align-items: center;
 
-  border-bottom: 1px solid $color--title-color;   /* 境界線に白いのボーダー */
-  
-    //position: relative;
-    // flex-direction: row;
-    // z-index: 1100;
-    position: fixed;
-    // top: 0;
-    // left: 0;
-    //box-sizing: border-box;
+    border-bottom: 1px solid $color--title-color;   /* 境界線に白いのボーダー */
+    position: fixed;    // ヘッダーの固定
 
-  > h1{
-      font-size: 2.6rem;// ここ、あとで見直し
-      // margin: 20px, 0, 20px, 15px;
-      // margin-top: 20px;
-      margin-left: 15px;
-      // margin-bottom: 20px;
-      @include breakpoint( breakpoint_large ){
-        margin-left: 120px;
-      }
-  }
+    > h1{
+        font-size: 2.6rem;
+        // margin: 20px, 0, 20px, 15px;
+        // margin-top: 20px;
+        margin-left: 15px;
+        // margin-bottom: 20px;
+        @include breakpoint( breakpoint_large ){
+          margin-left: 120px;
+        }
+    }
 
-  /* メニュー */
-  // .p-gnavi{
-  //   display: none;
-  //   //margin-top: 0;
-  //   @include breakpoint ( breakpoint_small ){
-  //     display: contents;
-  //   }
-  // }
-  
+    /* メニュークラス */
+    &__menu{
+    //     display: none;    /*領域そのものを生成しない*/
+    // width: 100vw;     /* ビューポートが 600px だとしたら、画像の幅は 60px になる */
+    // height: 100vh;    /*ビューポート　高さ*/
+    // position: fixed;  /*絶対位置、スクロールしても位置は固定されたまま*/
+    // top: 0;           /*上0*/
+    // left: 0;          /*左0*/
+    // z-index: 2;     
 
-//     /* メニュークラス */
-//   .l-header__menu{
-//     /* ハンバーガーメニューボタン */
-//     .p-button{
-//       // span{
-//         @include breakpoint (width_1201){
-//           display: none;
-//         }
-//       // }
-//     }
+
+        /* メニュー */
+        .p-gnavi{
+            display: none;
+            @include breakpoint ( breakpoint_large ){
+                display: inline;
+            }
+        }
+    }
+        /* ハンバーガーメニューボタン */
+        .p-hamburger{
+            @include breakpoint ( breakpoint_large ){
+                display: none;
+            }
+        }
+
 }
