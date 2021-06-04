@@ -4,7 +4,7 @@
     // background-color: $color--background-color;
     display: block;         /* ブロックレベルで表示 */
     width: 55px;            /* 幅 */
-    height: 75px;           /* 高さ */
+    height: 55px;           /* 高さ */
     position: relative;     /* 通常の位置を基準とした相対的な配置 */
     z-index: 3;             /* 値が大きいものほど前面（手前）に表示される （0 が基準）*/
     border: none;           /* 線なし */
@@ -25,14 +25,14 @@
 
         /* 三本線のマージン指定 */
         &-top{
-            top: 30px;
+            top: 20px;
         }
         &-middle{
             top: 50%;
             transform: translate(-50%,-50%);
         }
         &-bottom{
-            bottom: 29px;
+            bottom: 19px;
         }
     }
 
@@ -47,7 +47,7 @@
             transition: opacity .3s;
         }
         .bar-bottom{
-            transform: translate(-50%,-8px) rotate(-45deg);
+            transform: translate(-50%,-4px) rotate(-45deg);
             transition: transform .3s;
         }
     }

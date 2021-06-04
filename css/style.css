@@ -439,7 +439,7 @@ dd {
   /* ブロックレベルで表示 */
   width: 55px;
   /* 幅 */
-  height: 75px;
+  height: 55px;
   /* 高さ */
   position: relative;
   /* 通常の位置を基準とした相対的な配置 */
@@ -477,7 +477,7 @@ dd {
 }
 
 .p-hamburger .bar-top {
-  top: 30px;
+  top: 20px;
 }
 
 .p-hamburger .bar-middle {
@@ -486,7 +486,7 @@ dd {
 }
 
 .p-hamburger .bar-bottom {
-  bottom: 29px;
+  bottom: 19px;
 }
 
 .p-hamburger.is-open .bar-top {
@@ -500,7 +500,7 @@ dd {
 }
 
 .p-hamburger.is-open .bar-bottom {
-  transform: translate(-50%, -8px) rotate(-45deg);
+  transform: translate(-50%, -4px) rotate(-45deg);
   transition: transform .3s;
 }
 
