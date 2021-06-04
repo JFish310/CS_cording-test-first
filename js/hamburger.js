@@ -2,7 +2,7 @@
 $('.p-hamburger').on('click',function(){
 
     // .p-hamburger--buttonにcloseクラスを付与(ボタンのアニメーション)
-    $('.p-hamburger').toggleClass('in-open');
+    $('.p-hamburger').toggleClass('is-open');
 
     // .p-gnav--hamburgerが0.5秒でフェードイン(メニューのフェードイン)
     $('.p-gnav--hamburger').fadeToggle(500);
