@@ -3,9 +3,10 @@ $('.p-hamburger').on('click',function(){
 
     // .p-hamburger--buttonにcloseクラスを付与(ボタンのアニメーション)
     $('.p-hamburger').toggleClass('is-open');
+    $('.p-gnavi').toggleClass('is-open');
 
     // .p-gnav--hamburgerが0.5秒でフェードイン(メニューのフェードイン)
-    $('.p-gnav--hamburger').fadeToggle(500);
+    $('.p-gnavi__menu').fadeToggle(500);
 
     // bodyにnoscrollクラスを付与(スクロールを固定)
     $('body').toggleClass('noscroll');
