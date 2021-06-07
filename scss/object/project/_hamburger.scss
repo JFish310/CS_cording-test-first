@@ -9,9 +9,9 @@
     z-index: 3;             /* 値が大きいものほど前面（手前）に表示される （0 が基準）*/
     border: none;           /* 線なし */
     cursor: pointer;        /* リンクカーソル */
-    @include breakpoint( breakpoint_large ) {
-        display: none;
-    }
+    // @include breakpoint( breakpoint_large ) {
+    //     display: none;
+    // }
 
     /* ハンバーガーメニューボタン　装飾 */
     .bar{
@@ -52,9 +52,10 @@
         }
     }
 
-    // body.noscroll{
-    //     overflow: hidden;
-    // }
+    body.noscroll{
+        // スクロールバー非表示
+        overflow: hidden;
+    }
 
     //   .js-hamburger{
     //     width: 100%;
@@ -76,16 +77,16 @@
     //   }
   
   
-      /*  */
-      .p-gnavi__menu{
-        display: none;
-        width: 100vw;
-        height: 100vh;
-        position: fixed;
-        top: 0;
-        left: 0;
-        z-index: 2;
-      }
+    //   /*  */
+    //   .p-gnavi__menu{
+    //     display: none;
+    //     width: 100vw;
+    //     height: 100vh;
+    //     position: fixed;
+    //     top: 0;
+    //     left: 0;
+    //     z-index: 2;
+    //   }
     }
     // .bar{
     //   width: 25px;

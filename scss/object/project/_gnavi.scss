@@ -1,43 +1,95 @@
-.p-gnavi{
+.p-gnavi__menu{
+
+    &.is-open{
+        width: 100vw;
+        height: 100vh;
+        position: relative;
+        background-color: $color--background-color;
+        z-index: 100;
+        left: 0;
+    }
+
+//     width: 100%;
+//     height: 100%;
+//     background-color: $color--background-color;
+//     z-index: 2;
+//     &__menu{
+//         // display: none;
+//         @include breakpoint ( breakpoint_large ){
+//             // メニューの横並び
+//             display: flex;
+//             /* メニューの右側に余白 */
+//             li{
+//                 margin-right: 55px;
+//             }
+//         }
+//     }
+}
+
+
+
+  /*  */
+  .p-gnavi__menu{
+    // display: none;
+    // width: 100vw;
+    // height: 100vh;
+    // position: fixed;
+    // top: 0;
+    // left: 0;
+    // z-index: 2;
+    // &__menu{
     width: 100%;
     height: 100%;
     background-color: $color--background-color;
     z-index: 2;
-    &__menu{
-        // display: none;
-        @include breakpoint ( breakpoint_large ){
-            // メニューの横並び
-            display: flex;
-            /* メニューの右側に余白 */
-            li{
-                margin-right: 55px;
-            }
-        }
-    }
-}
-.p-gnavi--hamburger{
-    // display: none;      /*領域そのものを生成しない*/
-    // width: 100vw;       /* ビューポートが 600px だとしたら、画像の幅は 60px になる */
-    // height: 100vh;      /*ビューポート　高さ*/
-    // position: fixed;    /*絶対位置、スクロールしても位置は固定されたまま*/
-    // top: 0;             /*上0*/
-    // left: 0;            /*左0*/
-    // z-index: 2;         /*値が大きいものほど前面（手前）に表示される （0 が基準）
-    //                    キービジュアルと.btn_triggerとの重なりの前後関係を調整*/
-    width: 100%;
-    height: 100%;
-    background-color:$color--background-color;
-    z-index: 2;
-    &__menu{
-        display: block;
-        position: absolute;   /*絶対位置*/
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%,-50%);
-        text-align: center;
+
+        // display: block;
+        // position: absolute;   /*絶対位置*/
+        // top: 50%;
+        // left: 50%;
+        // transform: translate(-50%,-50%);
+        // text-align: center;
         li{
             margin-right: 0;
             margin-bottom: 40px;
         }
-    }
-}
+
+        // @include breakpoint ( breakpoint_large ){
+        //     // メニューの横並び
+        //     display: flex;
+        //     /* メニューの右側に余白 */
+        //     li{
+        //         margin-right: 55px;
+        //     }
+        // }
+  }
+
+
+
+  
+// .p-gnavi--hamburger{
+//     // display: none;      /*領域そのものを生成しない*/
+//     // width: 100vw;       /* ビューポートが 600px だとしたら、画像の幅は 60px になる */
+//     // height: 100vh;      /*ビューポート　高さ*/
+//     // position: fixed;    /*絶対位置、スクロールしても位置は固定されたまま*/
+//     // top: 0;             /*上0*/
+//     // left: 0;            /*左0*/
+//     // z-index: 2;         /*値が大きいものほど前面（手前）に表示される （0 が基準）
+//     //                    キービジュアルと.btn_triggerとの重なりの前後関係を調整*/
+//     width: 100%;
+//     height: 100%;
+//     background-color:$color--background-color;
+//     z-index: 2;
+//     // &__menu{
+//     //     display: block;
+//     //     position: absolute;   /*絶対位置*/
+//     //     top: 50%;
+//     //     left: 50%;
+//     //     transform: translate(-50%,-50%);
+//     //     text-align: center;
+//     //     li{
+//     //         margin-right: 0;
+//     //         margin-bottom: 40px;
+//     //     }
+//     // }
+// }

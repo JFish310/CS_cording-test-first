@@ -10,20 +10,24 @@
 
     border-bottom: 1px solid $color--title-color;   /* 境界線に白いのボーダー */
     position: fixed;    // ヘッダーの固定
-
+    // position: static;
+    z-index: auto;
+    
     > h1{
         font-size: 2.6rem;
         // margin: 20px, 0, 20px, 15px;
         // margin-top: 20px;
         margin-left: 15px;
         // margin-bottom: 20px;
+        position: relative;
+        z-index: 50;
         @include breakpoint( breakpoint_large ){
           margin-left: 120px;
         }
     }
 
     /* メニュークラス */
-    &__menu{
+    // &__menu{
     //     display: none;    /*領域そのものを生成しない*/
     // width: 100vw;     /* ビューポートが 600px だとしたら、画像の幅は 60px になる */
     // height: 100vh;    /*ビューポート　高さ*/
@@ -33,13 +37,21 @@
     // z-index: 2;     
 
 
+    .p-gnavi{
         /* メニュー */
-        .p-gnavi{
+        .p-gnavi__menu{
             display: none;
             @include breakpoint ( breakpoint_large ){
-                display: inline;
+                // display: inline;
+                display: flex;
+
+                /* メニューの右側に余白 */
+                li{
+                    margin-right: 55px;
+                }
             }
         }
+    // }
     }
         /* ハンバーガーメニューボタン */
         .p-hamburger{
