@@ -1,17 +1,11 @@
 /* ハンバーガーメニューボタン */
 .p-hamburger {
-    // color: $color--title-color;
-    // background-color: $color--background-color;
     display: block;         /* ブロックレベルで表示 */
     width: 55px;            /* 幅 */
     height: 55px;           /* 高さ */
     position: relative;     /* 通常の位置を基準とした相対的な配置 */
-    z-index: 3;             /* 値が大きいものほど前面（手前）に表示される （0 が基準）*/
     border: none;           /* 線なし */
     cursor: pointer;        /* リンクカーソル */
-    // @include breakpoint( breakpoint_large ) {
-    //     display: none;
-    // }
 
     /* ハンバーガーメニューボタン　装飾 */
     .bar{
@@ -52,78 +46,8 @@
         }
     }
 
-    body.noscroll{
-        // スクロールバー非表示
-        overflow: hidden;
-    }
-
-    //   .js-hamburger{
-    //     width: 100%;
-    //     height: 100%;
-    //     background-color:$color--background-color;
-    //     z-index: 2;
-    //     .p-gnavi__menu{
-    //       display: flex;
-    //       position: absolute;   /*絶対位置*/
-    //       top: 50%;
-    //       left: 50%;
-    //       transform: translate(-50%,-50%);
-    //       text-align: center;
-    //       li{
-    //         margin-right: 0;
-    //         margin-bottom: 40px;
-    //       }
-    //     }
-    //   }
-  
-  
-    //   /*  */
-    //   .p-gnavi__menu{
-    //     display: none;
-    //     width: 100vw;
-    //     height: 100vh;
-    //     position: fixed;
-    //     top: 0;
-    //     left: 0;
-    //     z-index: 2;
-    //   }
-    }
-    // .bar{
-    //   width: 25px;
-    //   height: 2px;
-    //   display: block;                 /* ブロックレベルで表示 */
-    //   position: absolute;             /* 絶対位置 */
-    //   // background-color: #1B1310;
-    //   color: #fff;
-    //   left: 50%;
-    //   //transform: translateX(-50%);  /* X方向の子要素の半分戻る */
-    // }
-  
-    // /* 三本線のマージン指定 */
-    // .bar_top{
-    //   top: 30px;
-    // }
-    // .bar_mid{
-    //   top: 50%;
-    //   transform: translate(-50%,-50%);
-    // }
-    // .bar_bottom{
-    //   bottom: 30px;
-    // }
-    // .p-hamburger.is-open .bar_top{
-  
-    // }
-    /*ボタンをクローズ*/
-    // .js-hamburger--button.is-open .bar_top{      
-    //   transform: translate(-50%,10px) rotate(45deg);      
-    //   transition: transform .3s;    
-    // }    
-    // .js-hamburger--button.is-open .bar_mid{      
-    //   opacity: 0;       
-    //   transition: opacity .3s;    
-    // }    
-    // .js-hamburger--button.is-open .bar_bottom{
-    // transform: translate(-50%,-8px) rotate(-45deg);
-    // transition: transform .3s;    
-    // }
-  
+}
+body.noscroll{
+    // スクロールバー非表示
+    overflow: hidden;
+}

@@ -72,6 +72,8 @@ https://daib-log.com/responsive/
 .l-header {
   width: 100%;
   height: 75px;
+  padding: 0 15px;
+  /* SP基準--PC-- */
   background-color: #1B1310;
   color: #fff;
   display: flex;
@@ -80,41 +82,44 @@ https://daib-log.com/responsive/
   border-bottom: 1px solid #fff;
   /* 境界線に白いのボーダー */
   position: fixed;
-  z-index: auto;
-  /* メニュークラス */
+  /* メニュー */
   /* ハンバーガーメニューボタン */
+}
+
+@media (min-width: 1025px) {
+  .l-header {
+    padding: 0 120px;
+  }
 }
 
 .l-header > h1 {
   font-size: 2.6rem;
-  margin-left: 15px;
-  position: relative;
-  z-index: 50;
-  /* SP基準--PC-- */
 }
 
-@media (min-width: 1025px) {
-  .l-header > h1 {
-    margin-left: 120px;
-  }
-}
-
-.l-header .p-gnavi {
-  /* メニュー */
-}
-
-.l-header .p-gnavi .p-gnavi__menu {
+.l-header__menu {
   display: none;
+  /* 領域そのものを生成しない */
+  width: 100vw;
+  /* ビューポートが 600px だとしたら、画像の幅は 60px になる */
+  height: 100vh;
+  /* ビューポート　高さ */
+  position: fixed;
+  /* 絶対位置、スクロールしても位置は固定されたまま */
+  top: 0;
+  /* 上0 */
+  left: 0;
+  /* 左0 */
   /* SP基準--PC-- */
 }
 
 @media (min-width: 1025px) {
-  .l-header .p-gnavi .p-gnavi__menu {
-    display: flex;
-    /* メニューの右側に余白 */
-  }
-  .l-header .p-gnavi .p-gnavi__menu li {
-    margin-right: 55px;
+  .l-header__menu {
+    display: block;
+    width: auto;
+    height: auto;
+    position: relative;
+    top: auto;
+    left: auto;
   }
 }
 
@@ -401,26 +406,47 @@ dd {
   }
 }
 
-.p-gnavi__menu.is-open {
-  width: 100vw;
-  height: 100vh;
-  position: relative;
-  background-color: #1B1310;
-  z-index: 100;
-  left: 0;
-}
-
-/*  */
-.p-gnavi__menu {
+.p-gnavi {
   width: 100%;
   height: 100%;
   background-color: #1B1310;
-  z-index: 2;
 }
 
-.p-gnavi__menu li {
+.p-gnavi .p-gnavi__menu {
+  display: block;
+  position: absolute;
+  /* 絶対位置 */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  /* SP基準--PC-- */
+}
+
+@media (min-width: 1025px) {
+  .p-gnavi .p-gnavi__menu {
+    display: flex;
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+  }
+}
+
+.p-gnavi .p-gnavi__menu li {
   margin-right: 0;
   margin-bottom: 40px;
+  /* SP基準--PC-- */
+}
+
+@media (min-width: 1025px) {
+  .p-gnavi .p-gnavi__menu li {
+    margin-right: 55px;
+    margin-bottom: 0;
+  }
+  .p-gnavi .p-gnavi__menu li:last-of-type {
+    margin-right: 0;
+  }
 }
 
 /* ハンバーガーメニューボタン */
@@ -433,8 +459,6 @@ dd {
   /* 高さ */
   position: relative;
   /* 通常の位置を基準とした相対的な配置 */
-  z-index: 3;
-  /* 値が大きいものほど前面（手前）に表示される （0 が基準）*/
   border: none;
   /* 線なし */
   cursor: pointer;
@@ -486,11 +510,10 @@ dd {
   transition: transform .3s;
 }
 
-.p-hamburger body.noscroll {
+body.noscroll {
   overflow: hidden;
 }
 
-/*ボタンをクローズ*/
 .p-main__news {
   padding: 0px 15px 150px;
 }
